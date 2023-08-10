@@ -106,4 +106,7 @@ jobs:
           issue-number: ${{ github.event.number }}
           body: ${{ steps.get-comment-body.outputs.body }}
           comment-id: ${{ steps.fc.outputs.comment-id }}
-          edit-mode: replace
+          edit-mode: edit #513 if necessary 
+          edit mode: replace old with new
+           
+      
