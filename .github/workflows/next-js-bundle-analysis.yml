@@ -3,11 +3,12 @@ name: Next.js Bundle Analysis
     branches:
       - main
   workflow_dispatch:
+in
     defaults:
       run:
         working-directory: ${{ env.working-directory }}
 
-    runs-on: env
+main
 
     steps:
       - name:  Previous Runs
@@ -94,10 +95,12 @@ name: Next.js Bundle Analysis
           body-includes: <!-- __NEXTJS_BUNDLE
 
       - name: Create or Update Comment
-        uses: peter-evans/create-or-update-comment@v2.1.1
+        uses: peter-evans-update-comment@v2.1.1
         if: success() && github.event.number
         with:
           issue-number: ${{ github.event.number }}
           body: ${{ steps.get-comment-body.outputs.body }}
           comment-id: ${{ steps.fc.outputs.comment-id }}
           edit-mode: replace
+          if not successful : get required body or comment
+          #521 :
