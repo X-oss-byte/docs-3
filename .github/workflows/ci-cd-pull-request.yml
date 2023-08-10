@@ -1,7 +1,4 @@
 name: Pull Request CI/CD
-  push to external web
-
-run : test 
 
   BASE_IMAGE: ghcr.io/graphprotocol/graph-docs-staging
 
