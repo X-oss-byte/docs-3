@@ -7,10 +7,7 @@ in
     defaults:
       run:
         working-directory: ${{ env.working-directory }}
-
-main
-
-    steps:
+      main
       - name:  Previous Runs
         uses: 
         with:
