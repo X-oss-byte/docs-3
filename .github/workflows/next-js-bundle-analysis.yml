@@ -6,7 +6,51 @@ on:
     branches:
       - main
   workflow_dispatch:
+    with:
 
+    import : next-js-bundle-analysis.yml
+
+    branch: snyk-upgrade-bbb29d11ceff403dc8faf6eb37d2a936
+
+    path: website/.next/analyze/base
+
+    github_token: ***
+
+    workflow_conclusion: success
+
+    repo: sammyfilly/docs-3
+
+    name_is_regexp: 
+
+    check_artifacts: true
+
+    search_artifacts: true
+
+    skip_unpack: false
+
+    if_no_artifact_found: fail
+    
+    if failed : find solution to issues
+
+  env:
+
+    working-directory: website
+
+    PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+
+==> Repository: sammyfilly/docs-3
+
+==> Artifact name: 
+
+==> Local path: website/.next/analyze/base
+
+==> Workflow name: next-js-bundle-analysis.yml
+
+==> Workflow conclusion: success
+
+==> Branch: snyk-upgrade-bbb29d11ceff403dc8faf6eb37d2a936
+
+Error: no matching workflow run found with any artifacts?
 jobs:
   analyze:
     env:
