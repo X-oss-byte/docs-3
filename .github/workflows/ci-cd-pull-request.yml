@@ -1,6 +1,4 @@
 name: Pull Request CI/CD
-
-
 env:
   BASE_IMAGE: ghcr.io/graphprotocol/graph-docs-staging
 
