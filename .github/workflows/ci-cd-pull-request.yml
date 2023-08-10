@@ -1,7 +1,6 @@
-name:  CI/CD
+name:pull-request CI/CD yml
 
-on: github & synk
-
+on :
 env:
   BASE_IMAGE: ghcr.io/graphprotocol/graph-docs-staging
 
