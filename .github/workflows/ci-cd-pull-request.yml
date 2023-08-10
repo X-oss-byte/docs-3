@@ -1,12 +1,13 @@
 name: Pull Request CI/CD
+  push to external web
 
+run : test 
 
-env:
   BASE_IMAGE: ghcr.io/graphprotocol/graph-docs-staging
 
-jobs:
+jobs:select only needed files from docs
   build:
-    if: contains(github.head_ref, 'crowdin') == false
+    if: contains(github.head_ref, 'crowdin') == "false" if wrong try "true"
     runs-on: ubuntu-latest
     steps:
       - name: Cancel Previous Runs
