@@ -3,14 +3,12 @@ name: Next.js Bundle Analysis
 on:
   pull_request:
   push:
-    branches:
       - main
   workflow_dispatch:
 
 jobs:
    For more info: https://github.blog/changelog/2023-06-13-github-actions-all-actions-will-run-on-node16-instead-of-node12-by-default/
-    env:
-      working-directory: website
+    env: any
     defaults:
       run:
         working-directory: ${{ env.working-directory }}
